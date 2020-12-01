@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: 100%;
+            background-color: #f9f9f9;
+        }
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }
+        .container {
+            width: 700px;
+            overflow: auto;
+            background-color: #f9f9f9;
+        }
+        .table-header,
+        .table-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .table-header {
+            background-color: #ddd;
+        }
+        .table-cell {
+            min-height: 50%;
+            padding: 8px 4px;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+        }
+        .fund-input {
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .fund-text {
+            flex: 1;
+            position: relative;
+            padding: 0 4px;
+            font-size: 12px;
+            color: #555;
+            line-height: 28px;
+            font-weight: 100;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: none;
+        }
+        .fund-add {
+            width: 50px;
+            height: 28px;
+            line-height: 28px;
+            color: #fff;;
+            background-color:#1890ff;
+            border: 0;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+        .fund-remove {
+            color: #555;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="table">
+            <div class="table-header">
+                <div class="table-cell" style="width: 120px;">基金名称</div>
+                <div class="table-cell" style="width: 65px;">基金代码</div>
+                <div class="table-cell" style="width: 65px;">单位净值</div>
+                <div class="table-cell" style="width: 65px;">今日估值</div>
+                <div class="table-cell" style="width: 85px;">今日收益比</div>
+                <div class="table-cell" style="width: 100px;">持仓份额</div>
+                <div class="table-cell" style="width: 100px;">总投入</div>
+                <div class="table-cell" style="width: 65px;">今日收益</div>
+                <div class="table-cell" style="width: 85px;">更新时间</div>
+                <div class="table-cell" style="width: 50px;">操作</div>
+            </div>
+            <div class="table-body">
+                <div class="table-row">
+                    <div class="table-cell" style="width: 120px;">万家品质</div>
+                    <div class="table-cell" style="width: 65px;">519195</div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">1.7945</div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">1.7992</div>
+                    <div class="table-cell" style="width: 85px;">0.26%</div>
+                    <div class="table-cell" style="width: 100px;"><textarea rows="1" placeholder="持仓份额" class="fund-text">644.93</textarea></div>
+                    <div class="table-cell" style="width: 100px;"><textarea rows="1" placeholder="总投入" class="fund-text">644.93</textarea></div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">￥3.01</div>
+                    <div class="table-cell" style="width: 85px;">2020-07-23 15:00</div>
+                    <div class="table-cell" style="width: 50px;"><button class="fund-remove">删除</button></div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell" style="width: 120px;">万家品质</div>
+                    <div class="table-cell" style="width: 65px;">519195</div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">1.7945</div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">1.7992</div>
+                    <div class="table-cell" style="width: 85px;">0.26%</div>
+                    <div class="table-cell" style="width: 100px;"><textarea rows="1" placeholder="持仓份额" class="fund-text">644.93</textarea></div>
+                    <div class="table-cell" style="width: 100px;"><textarea rows="1" placeholder="总投入" class="fund-text">644.93</textarea></div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">￥3.01</div>
+                    <div class="table-cell" style="width: 85px;">2020-07-23 15:00</div>
+                    <div class="table-cell" style="width: 50px;"><button class="fund-remove">删除</button></div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell" style="width: 120px;">国泰国证医药卫生行业指数分级</div>
+                    <div class="table-cell" style="width: 65px;">519195</div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">1.7945</div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">1.7992</div>
+                    <div class="table-cell" style="width: 85px;">0.26%</div>
+                    <div class="table-cell" style="width: 100px;"><textarea rows="1" placeholder="持仓份额" class="fund-text">644.93</textarea></div>
+                    <div class="table-cell" style="width: 100px;"><textarea rows="1" placeholder="总投入" class="fund-text">644.93</textarea></div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">￥3.01</div>
+                    <div class="table-cell" style="width: 85px;">2020-07-23 15:00</div>
+                    <div class="table-cell" style="width: 50px;"><button class="fund-remove">删除</button></div>
+                </div>
+            </div>
+            <div class="table-footer">
+                <div class="table-row">
+                    <div class="table-cell" style="width: 120px;">总收益</div>
+                    <div class="table-cell" style="width: 65px;"></div>
+                    <div class="table-cell" style="width: 65px;"></div>
+                    <div class="table-cell" style="width: 65px;"></div>
+                    <div class="table-cell" style="width: 85px;"></div>
+                    <div class="table-cell" style="width: 100px;"></div>
+                    <div class="table-cell" style="width: 100px;"></div>
+                    <div class="table-cell" style="width: 65px;color: #f00;font-weight: bold;">￥3.01</div>
+                    <div class="table-cell" style="width: 85px;">2020-07-23 15:00</div>
+                    <div class="table-cell" style="width: 50px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="fund-input">
+            <div class="table-cell">
+                <textarea rows="1" placeholder="基金代码" class="fund-text"></textarea>
+            </div>
+            <div class="table-cell">
+                <textarea rows="1" placeholder="持仓份额" class="fund-text"></textarea>
+            </div>
+            <div class="table-cell">
+                <textarea rows="1" placeholder="总投入" class="fund-text"></textarea>
+            </div>
+            <div class="table-cell">
+                <button class="fund-add">新增</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

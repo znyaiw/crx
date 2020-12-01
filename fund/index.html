@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: 100%;
+            background-color: #f9f9f9;
+        }
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }
+        .container {
+            width: 700px;
+            color: #999;
+            overflow: auto;
+            /* background-color: #f9f9f9; */
+        }
+        .table-header {
+            color: #555;
+        }
+        .table-header,
+        .table-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .table-header {
+            background-color: #ddd;
+        }
+        .table-cell {
+            min-height: 50%;
+            padding: 8px 4px;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+        }
+        .fund-input {
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .fund-text-share,
+        .fund-text-putin,
+        .fund-text-input {
+            flex: 1;
+            position: relative;
+            padding: 0 4px;
+            font-size: 12px;
+            color: #555;
+            line-height: 28px;
+            font-weight: 100;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: none;
+        }
+        .fund-add {
+            width: 50px;
+            height: 28px;
+            line-height: 28px;
+            color: #fff;;
+            background-color:#1890ff;
+            border: 0;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+        .fund-remove {
+            color: #555;
+            border: 0;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
