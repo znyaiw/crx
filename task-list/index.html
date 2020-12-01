@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        textarea {
+            background-color: #f9f9f9;
+        }
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }
+        .container {
+            width: 400px;
+            overflow: auto;
+            background-color: #f9f9f9;
+        }
+        .task-list {
+            display: flex;
+            flex-direction: column;
+        }
+        .task-list-todo {
+            max-height: 320px;
+            overflow-y: auto;
+            transition: all 0.2s;
+        }
+        .task-item,
+        .task-group-list,
+        .task-group-title {
+            width: 100%;
+            min-height: 44px;
+            position: relative;
+            padding-left: 8px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .task-item {
+            border-bottom: 1px solid #ddd;
+        }
+        .task-item-text {
+            flex: 1;
+            position: relative;
+            font-size: 14px;
+            color: #555;
+            line-height: 20px;
+            font-weight: 100;
+            border: 0;
+            resize: none;
+            overflow: hidden;
+            cursor: text;
+        }
+        .task-group-list {
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .task-group-list .task-item {
+            padding-left: 0;
+        }
+        .task-action {
+            padding-left: 8px;
+        }
+        .icon {
+            width: 44px;
+            height: 44px;
+            background-color: transparent;
+            background-size: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 0;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .icon.task-item-checkbox {
+            background-image: url('./icons/uncheck.png');
+        }
+        .done .icon.task-item-checkbox {
+            background-image: url('./icons/checked.png');
+        }
+        .icon.task-item-remove,
+        .icon.task-group-remove {
+            background-image: url('./icons/remove.png');
+            visibility: hidden;
+        }
+        .task-item:hover .icon.task-item-remove,
+        .task-group-title:hover .icon.task-group-remove {
+            visibility: visible;
+        }
+        .icon.task-group-checkbox {
+            background-image: url('./icons/part.png');
+        }
+        .icon.task-input-add,
+        .icon.task-button-add {
+            background-image: url('./icons/add.png');
+        }
+        .icon.task-button-add {
+            float: right;
+            display: none;
+        }
+        .icon.task-all {
+            background-image: url('./icons/all.png');
+        }
+        .icon.task-all.selected {
+            background-image: url('./icons/all_active.png');
+        }
+        .icon.task-todo {
+            background-image: url('./icons/todo.png');
+        }
+        .icon.task-todo.selected {
+            background-image: url('./icons/todo_active.png');
+        }
+        .icon.task-done {
+            background-image: url('./icons/done.png');
+        }
+        .icon.task-done.selected {
+            background-image: url('./icons/done_active.png');
+        }
+        .icon.task-cycle {
+            background-image: url('./icons/cycle.png');
+        }
+        .icon.task-export {
+            background-image: url('./icons/download.png');
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
