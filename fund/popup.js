@@ -17,7 +17,7 @@ document.querySelector('.container').innerHTML = `
         <div class="table-cell" style="width: 65px;">今日估值</div>
         <div class="table-cell" style="width: 85px;">今日收益比</div>
         <div class="table-cell" style="width: 100px;">持仓份额</div>
-        <div class="table-cell" style="width: 65px;">今日收益</div>
+        <div class="table-cell" style="width: 65px;">估算收益</div>
         <div class="table-cell" style="width: 85px;">更新时间</div>
         <div class="table-cell" style="width: 50px;">操作</div>
     </div>
@@ -74,7 +74,7 @@ function renderFundList() {
     });
     
     let totalHTML = `<div class="table-row">
-        <div class="table-cell" style="width: 120px;color: rgb(213,60,40);">今日总收益</div>
+        <div class="table-cell" style="width: 120px;color: rgb(213,60,40);">估算总收益</div>
         <div class="table-cell" style="width: 65px;"></div>
         <div class="table-cell" style="width: 65px;"></div>
         <div class="table-cell" style="width: 65px;"></div>
@@ -133,7 +133,7 @@ function jsonpgz(data) {
         newFund.todayValue = data.gsz;
         newFund.percent = data.gszzl;
         newFund.share = '0.00';
-        newFund.toadyEarn = (fund.share * fund.unitValue * fund.percent / 100).toFixed(2);
+        newFund.toadyEarn = (newFund.share * data.dwjz * data.gszzl / 100).toFixed(2);
         newFund.freshTime = data.gztime;
         _GLOBAL.LIST.push(newFund);
     }
